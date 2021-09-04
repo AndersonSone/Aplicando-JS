@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" >
+		function displayTime() { 
+		var elt = document.getElementById("clock"); // Localiza o elemento com id="clock"
+		var now = new Date();    // Obtém a hora atual 
+		elt.innerHTML = now.toLocaleTimeString(); // Faz elt exibi-la 
+		setTimeout(displayTime, 1000);   // Executa novamente em 1 segundo 
+		} 
+		window.onload = displayTime;
+	</script>
+	<style> 
+	div{
+		display: grid;
+		place-items: center;
+	}    
+	#clock {     
+	font: bold 24pt sans; 
+	background: #ddf;    
+	padding: 10px;   
+	border: solid black 2px; 
+	border-radius: 10px; 
+	} 
+	</style> 
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		<h1>Relogio Digital </h1>  
+		<span id="clock"></span> 
+		
+	</div>
+	
+	
+</body>
+</html>
